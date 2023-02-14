@@ -1,0 +1,32 @@
+Types of TestNG listeners
+
+Ans. Types are:
+		IAnnotationTransformer 
+		IAnnotationTransformer2 
+		IConfigurable 
+		IConfigurationListener 
+		IExecutionListener
+		IHookable 
+		IInvokedMethodListener 
+		IInvokedMethodListener2 
+		IMethodInterceptor 
+		IReporter
+		ISuiteListener
+		ITestListener 
+		
+		Syntax for ITestListener:
+		
+			public class Listeners implements ITestListeners{
+			
+			}
+			
+			// methods implemented using Test NG listeners are as follows:
+			
+			onStart(): invoked after test class is instantiated and before 
+						execution of any testNG method.
+			onTestSuccess(): invoked on the success of a test
+			onTestFailure(): invoked on the failure of a test
+			onTestSkipped(): invoked when a test is skipped
+			onTestFailedButWithinSuccessPercentage(): invoked whenever a 
+							method fails but within the defined success percentage
+			onFinish():  Invokes after all test of classes are executed

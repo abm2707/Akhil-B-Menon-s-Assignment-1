@@ -1,0 +1,30 @@
+How to pass data using Data Providers ?
+Ans.  The TestNG DataProvider (the annotation part) contains only one single attribute, 
+ which is its name. 
+DataProviders are not declared on top of the functions like TestNG parameters
+ but have a method of their own, which in regular speaking terms called a dataprovider method.
+ 
+ Example: 
+ 			@Test(dataprovider = getUserData)  //name of data provider is getUserData
+ 			public void ValidateUserLogin(String usrname ,String pwd){
+ 			
+ 			
+ 			}
+ 			
+ 			@DataProvider       			 //method is created with the name same as 
+ 											 //dataprovider to pass value
+			public Object[][] getUserData() {   
+			Object[][] data = new Object[3][2];  // [3][2] means three rows and 2 cols.
+			
+			data[0][0] = "value1";
+			data[0][1] = "value2";
+		
+			data[1][0] = "value3";
+			data[1][1] = "value4";
+			
+			data[2][0] = "value5";
+			data[2][0] = "value6";		
+			return data;
+			}
+			
+			//The values will be passed to usrname and pwd

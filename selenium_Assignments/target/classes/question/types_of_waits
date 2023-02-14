@@ -1,0 +1,15 @@
+Types of waits in selenium
+
+1. Implicitly wait
+	The Implicit Wait in Selenium is used to tell the web driver 
+	to wait for a certain amount of time before it throws a No Such Element Exception.
+	
+	syntax: driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS); \
+		The duration may be in seconds or milliseconds etc.
+		
+2. Explicitly wait
+	The Explicit Wait in Selenium is used to tell the Web Driver to wait for certain 
+	conditions to be true before throwing “ElementNotVisibleException” exception.
+	
+	syntax:
+		WebDriverWait wait = new WebDriverWait(WebDriverRefrence,TimeOut);

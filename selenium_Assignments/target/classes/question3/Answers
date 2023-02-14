@@ -1,0 +1,62 @@
+What is priority in TestNG ?
+Ans. --> Priority in TestNG tells us about the order of execution.
+	 syntax: 
+	 	@Test(priority = 2)
+			public void method_name() {
+			System.out.println(" Content to be printed");
+		}
+		
+	 --> Assertion
+	 	Assertion is to make sure that an expected result and actual results are matched or not.
+		syntax:
+				assertEquals(expectedResult,ActualResult);
+									or
+				assertEquals(True)  //Checking if the condition is true.
+--------------------------------------------------------------------------------------------
+	
+	  -->Types of assertion
+	  	Hard assertion:Hard assertion is the type of assertion where an exception is thrown
+	  					immediately when assert statement fails.
+	  					Test steps after hard assertion will not be 
+	  					executed and the next test in the test suite will start.
+	  				syntax:
+	  					Assertion hardAssert = new Assertion();
+	  					
+	  	Soft Assertion:In soft assertion an exception is not thrown immediately when an assert
+	  					statement fails.All the statement is executed before failing the test.
+					syntax:
+						Assertion softAssert = new SoftAssert();
+----------------------------------------------------------------------------------------------
+						
+		--> Hooks: Hooks are the blocks of code that run before or after each senario.
+				Hooks are of @Before and @After . @Before runs the piece of code before 
+										each senario.
+										
+					@After runs the piece of code after 
+										each senario.
+-----------------------------------------------------------------------------------------------										
+										
+		--> Annotations in TestNG
+			@BeforeSuite - The @BeforeSuite method in TestNG runs 
+			before the execution of all other test methods.
+			
+			 @BeforeTest - The @BeforeTest method in TestNG runs before
+			 the execution of all the test methods that are inside that folder.
+			 
+			 @BeforeClass - The @BeforeClass method in TestNG will run 
+			 before the first method invokes of the current class.
+			 
+			 @BeforeMethod - The @BeforeMethod method in TestNG will 
+			 execute before each test method.
+			 
+			 @AfterSuite - The @AfterSuite method in TestNG runs 
+			 after the execution of all other test methods.
+			 
+			 @AfterTest - The @AfterTest method in TestNG executes after the 
+			 execution of all the test methods that are inside that folder.
+			 
+			 @AfterClass - The @AfterClass method in TestNG will execute 
+			 after all the test methods of the current class execute.
+			 
+			 @AfterMethod - The @AfterMethod method in TestNG will 
+			 run after each test method is executed.

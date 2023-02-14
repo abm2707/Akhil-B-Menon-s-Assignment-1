@@ -1,0 +1,22 @@
+Sometimes false test case failures may happen. Hence, in TestNG there is a mechanism of retry logic
+which will continuously rerun the failed test case and make sure that it was not a false failure.
+
+In order to utilize the functionality of Retry analzer a public interface is created and is as
+follow:
+
+public class abc implements IRetryAnalyzer {
+
+	int counter = 0;
+	int retryLimit = 4;
+
+	@Override
+	public boolean retry(ITestResult result) {
+
+		if(counter < retryLimit)
+		{
+			counter++;
+			return true;
+		}
+		return false;
+	}
+} 
